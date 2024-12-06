@@ -5,6 +5,7 @@
         "allowJs": true,
         "esModuleInterop": true,
         "module": "ESNext",
+        "moduleResolution": "bundler",
         "target": "ESNext",
         "types": ["node"]
     }
