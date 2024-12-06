@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "noEmit": true,
+        "strict": false,
+        "allowJs": true,
+        "esModuleInterop": true,
+        "module": "ESNext",
+        "target": "ESNext",
+        "types": ["node"]
+    }
+}
