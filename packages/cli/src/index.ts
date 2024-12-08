@@ -5,6 +5,8 @@ import inquirer from 'inquirer'
 import figlet from 'figlet'
 import { Command } from 'commander'
 
+import { defineConfig } from 'spikey/config'
+
 const program = new Command()
 
 program
@@ -47,7 +49,18 @@ program.command('create').action(async () => {
         },
     ])
 
-    console.log(answers)
+    const pluginUUID = `com.${answers.plugin_author
+        .toLowerCase()
+        .replaceAll(' ', '-')}.${answers.plugin_name.toLowerCase().replaceAll(' ', '-')}`
+
+    const config = defineConfig({
+        pluginName: answers.plugin_name,
+        author: answers.plugin_author,
+        version: answers.plugin_version,
+        pluginUUID,
+    })
+
+    console.log(config)
 })
 
 program.parse()

@@ -1,3 +1,5 @@
+import type { SpikeyConfig } from './types/config'
+
 const defaultConfig: SpikeyConfig = {
     pluginName: 'My StreamDeck Plugin',
     version: '1.0.0',
@@ -7,7 +9,11 @@ const defaultConfig: SpikeyConfig = {
     actions: {},
 }
 
-export class SpikeyConfigManager {
+export function defineConfig(user_config?: Partial<SpikeyConfig>) {
+    return new SpikeyConfigManager(user_config)
+}
+
+class SpikeyConfigManager {
     private config: SpikeyConfig
 
     constructor(user_config?: Partial<SpikeyConfig>) {
@@ -38,3 +44,5 @@ export class SpikeyConfigManager {
         return this.config.actions[action_id]
     }
 }
+
+export type { SpikeyConfig }

@@ -6,7 +6,9 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm run spikey:build && pnpm run cli:build",
+    "spikey:build": "cd packages/spikey && pnpm run build",
+    "cli:build": "cd packages/cli && pnpm run build"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",

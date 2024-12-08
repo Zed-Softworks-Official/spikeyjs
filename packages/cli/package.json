@@ -19,6 +19,7 @@
     "figlet": "^1.8.0",
     "inquirer": "^12.1.0",
     "nanospinner": "^1.2.0",
+    "spikey": "link:../spikey",
     "zod": "^3.23.8"
   },
   "devDependencies": {

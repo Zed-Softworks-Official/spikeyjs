@@ -1,4 +1,4 @@
-type SpikeyConfig = {
+export type SpikeyConfig = {
     pluginName: string
     version: string
     author: string

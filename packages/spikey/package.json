@@ -1,20 +1,33 @@
 {
   "name": "spikey",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Framework for creating Stream Deck plugins",
+  "main": "dist/index.js",
+  "types": "dist/**/*.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Zed Softworks LLC",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^22.10.1",
+    "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
   "dependencies": {
     "@elgato/cli": "^1.1.0",
-    "@elgato/streamdeck": "^1.2.1"
+    "@elgato/streamdeck": "^1.2.1",
+    "spikey": "link:"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.js"
+    }
   }
 }

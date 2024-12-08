@@ -47,6 +47,9 @@ importers:
       nanospinner:
         specifier: ^1.2.0
         version: 1.2.0
+      spikey:
+        specifier: link:../spikey
+        version: link:../spikey
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -63,10 +66,16 @@ importers:
       '@elgato/streamdeck':
         specifier: ^1.2.1
         version: 1.2.1
+      spikey:
+        specifier: 'link:'
+        version: 'link:'
     devDependencies:
       '@types/node':
         specifier: ^22.10.1
         version: 22.10.1
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(typescript@5.7.2)
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
